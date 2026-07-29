@@ -181,14 +181,14 @@ this simulation's to change; flagged here rather than edited.
 
 **Layout (priority 3, replicated as far as the shell allows).**
 
-The screenshot's arrangement is kept: the plot on the left, the condensation
-panel as a tall narrow strip on its right and the same height as the plot panel,
-and the temperature control directly beneath the plot in the plot's own column
-(not spanning the full page) — which is where the original's slider sits, below
-the condensation box and centred under the graph. Below the KL-UNL 56 rem
-breakpoint the three panels stack in that same reading order and each takes its
-natural height. The original's fixed 760 × 560 pixel stage, its fonts and its
-panel chrome are not reproduced.
+The screenshot's arrangement is kept. There are two panels, side by side and the
+same height, as in the original: on the left the plot with the temperature
+control inside the same box directly beneath it, on the right the condensation
+temperatures as a tall narrow strip. The condensation panel's band grows above
+its `rem` floor to whatever height the left panel settles on, which is what keeps
+the two boxes level. Below the KL-UNL 56 rem breakpoint the two panels stack in
+reading order and each takes its natural height. The original's fixed 760 × 560
+pixel stage, its fonts and its panel chrome are not reproduced.
 
 ## Cross-browser notes
 

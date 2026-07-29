@@ -56,25 +56,21 @@ body {
    temperature control across the bottom -- the grouping of the original.
    --------------------------------------------------------------------------- */
 
+/* Two panels, side by side, the same height: the graph and its temperature
+   control on the left, the condensation temperatures on the right. */
 .app-layout.ft-layout {
   grid-template-columns: minmax(0, 1fr) 17rem;
   gap:              var(--ft-space-sm);
   padding:          var(--ft-space-sm) 0;
-  /* The two panels on the top row stretch to a common height. */
   align-items:      stretch;
 }
-
-.ft-panel--plot     { grid-column: 1; grid-row: 1; }
-.ft-panel--states   { grid-column: 2; grid-row: 1; }
-/* The temperature control sits under the graph, in the graph's own column. */
-.ft-panel--controls { grid-column: 1; grid-row: 2; }
 
 .ft-panel {
   padding-bottom:   var(--ft-space-sm);
 }
 
-/* Both top-row panels are flex columns so that whichever one is shorter gives
-   its spare height to its own diagram rather than leaving a gap under it. */
+/* Both panels are flex columns so that whichever one has spare height gives it
+   to its own diagram rather than leaving a gap underneath. */
 .ft-panel--plot,
 .ft-panel--states {
   display:          flex;
@@ -329,6 +325,12 @@ body {
 
 .ft-current__label { font-weight: bold; }
 
+/* The control's own help text sits between the graph and the control it
+   describes, so it needs the panel's side padding but no top gap of its own. */
+.ft-help {
+  margin-top:       0;
+}
+
 /* ---------------------------------------------------------------------------
    Responsive: desktop -> iPad -> phone portrait.
 
@@ -342,15 +344,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* One column: the panels take their own natural heights in reading order,
-     so the equal-height pairing and the column placement both stand down. */
-  .ft-panel--plot,
-  .ft-panel--states,
-  .ft-panel--controls {
-    grid-column:    auto;
-    grid-row:       auto;
-  }
-
+  /* One column: each panel takes its own natural height, so the equal-height
+     pairing stands down. */
   .ft-band {
     flex:           0 0 auto;
     min-height:     30rem;

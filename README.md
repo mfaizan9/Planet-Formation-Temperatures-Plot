@@ -50,7 +50,7 @@ Deployed to the cloud host and served over HTTP or HTTPS it just works; the
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | KL-UNL page scaffold: `.app-shell`, `<kl-unl-masthead>`, three `.panel` sections |
+| `index.html` | KL-UNL page scaffold: `.app-shell`, `<kl-unl-masthead>`, two `.panel` sections |
 | `foundation/` | Shared KL-UNL files, copied in **unchanged** — never edit these |
 | `styles/styles.css` | Only this simulation's styles, layered on top of `foundation/kl-unl.css` |
 | `simulation.js` | All simulation logic, ported from the decompiled ActionScript |

@@ -8,8 +8,11 @@ pass with NVDA on Windows and VoiceOver on macOS and iOS.
 ## Structure and landmarks
 
 - One `<h1>`, rendered by `<kl-unl-masthead>` from `contents.json`; the page adds
-  no competing `h1`. Panels use `<h2>`, in order: *Formation Temperature and
-  Distance*, *Condensation Temperatures*, *Temperature Control*. No skipped levels.
+  no competing `h1`. There are two panels, each with an `<h2>`: *Formation
+  Temperature and Distance* (the plot and, beneath it, the temperature control)
+  and *Condensation Temperatures*. No skipped levels. The temperature control
+  needs no heading of its own — it is a `<fieldset>` whose legend, *Formation
+  temperature*, names the group.
 - `<main class="app-shell" id="main-content">` with a skip link ahead of it;
   each panel is a `<section>` tied to its heading with `aria-labelledby`; the
   masthead supplies `<nav>`.

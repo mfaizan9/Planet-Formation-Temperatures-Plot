@@ -93,6 +93,39 @@
 
           <p id="plot-desc" class="sr-only"></p>
         </div>
+
+        <!-- The temperature control lives in this same panel, directly under the
+             graph, as the slider does in the original sim. The fieldset legend
+             names the group, so no extra heading is introduced. -->
+        <p class="panel__help ft-help">
+          Set a formation temperature. The red circle moves along the trend line
+          to the distance at which the disk reached that temperature, and the
+          boundary between the solid and gas regions moves to match.
+        </p>
+
+        <fieldset class="control-fieldset ft-fieldset">
+          <legend class="control-fieldset__legend">Formation temperature</legend>
+
+          <div class="control-row ft-row">
+            <label class="control-row__label" for="temp-number">Temperature</label>
+            <span class="ft-field">
+              <input class="control-row__input ft-number" id="temp-number" type="number"
+                     min="35" max="1520" step="1" value="600"
+                     inputmode="numeric" autocomplete="off" spellcheck="false">
+              <span class="ft-unit" id="unit-kelvin" aria-hidden="true">\(\mathrm{K}\)</span>
+              <span class="sr-only" id="temp-number-unit">kelvin</span>
+            </span>
+            <label class="sr-only" for="temp-slider">Temperature slider</label>
+            <input class="control-row__slider ft-slider" id="temp-slider" type="range"
+                   min="0" max="1000" step="1" value="754">
+          </div>
+
+          <p class="ft-current">
+            <span class="ft-current__label">Distance from the Sun:</span>
+            <span class="ft-current__value" id="current-dist" aria-hidden="true"></span>
+            <span class="sr-only" id="current-dist-sr"></span>
+          </p>
+        </fieldset>
       </section>
 
       <!-- ====================== CONDENSATION TEMPERATURES ====================== -->
@@ -142,41 +175,6 @@
 
           <p id="states-desc" class="sr-only"></p>
         </div>
-      </section>
-
-      <!-- ============================== CONTROLS ============================== -->
-      <section class="panel ft-panel ft-panel--controls" aria-labelledby="controls-heading">
-        <h2 class="panel__heading" id="controls-heading">Temperature Control</h2>
-
-        <p class="panel__help">
-          Set a formation temperature. The red circle moves along the trend line
-          to the distance at which the disk reached that temperature, and the
-          boundary between the solid and gas regions moves to match.
-        </p>
-
-        <fieldset class="control-fieldset ft-fieldset">
-          <legend class="control-fieldset__legend">Formation temperature</legend>
-
-          <div class="control-row ft-row">
-            <label class="control-row__label" for="temp-number">Temperature</label>
-            <span class="ft-field">
-              <input class="control-row__input ft-number" id="temp-number" type="number"
-                     min="35" max="1520" step="1" value="600"
-                     inputmode="numeric" autocomplete="off" spellcheck="false">
-              <span class="ft-unit" id="unit-kelvin" aria-hidden="true">\(\mathrm{K}\)</span>
-              <span class="sr-only" id="temp-number-unit">kelvin</span>
-            </span>
-            <label class="sr-only" for="temp-slider">Temperature slider</label>
-            <input class="control-row__slider ft-slider" id="temp-slider" type="range"
-                   min="0" max="1000" step="1" value="754">
-          </div>
-
-          <p class="ft-current">
-            <span class="ft-current__label">Distance from the Sun:</span>
-            <span class="ft-current__value" id="current-dist" aria-hidden="true"></span>
-            <span class="sr-only" id="current-dist-sr"></span>
-          </p>
-        </fieldset>
       </section>
 
     </div><!-- /.app-layout -->
